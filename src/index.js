@@ -12,7 +12,8 @@ const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && wi
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider>
+    {/* NO1; You did not pass in your store to your appp here */}
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>
